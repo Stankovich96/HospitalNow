@@ -20,20 +20,18 @@ const theme = createMuiTheme(themeFile);
 function App() {
 	return (
 		<MuiThemeProvider theme={theme}>
-			<div className="App">
-				<Router>
-					<Navbar />
-					<div className="container">
-						<Switch>
-							<Route exact path="/" component={Home} />
-							<Route exact path="/About" component={About} />
-							<Route exact path="/Search" component={Search} />
-							<Route exact path="/Services" component={Services} />
-						</Switch>
-					</div>
-					<Footer />
-				</Router>
-			</div>
+			<Router>
+				<Navbar />
+				<div className="container">
+					<Switch>
+						<Route exact path="/" component={Home} />
+						<Route exact path="/About" component={About} />
+						<Route exact path="/Search" component={Search} />
+						<Route exact path="/Services" component={Services} />
+					</Switch>
+				</div>
+				<Footer />
+			</Router>
 		</MuiThemeProvider>
 	);
 }
